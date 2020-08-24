@@ -10,3 +10,8 @@ Este addon para Blender puede ser útil por ejemplo para homogeneizar varios cli
 3. Seleccione el .zip descargado
 4. Habilite el complemento, que aparecerá en la lista.arecerá en la lista.
 
+
+Una vez instalado abra una ventana de tipo "Dope Sheet" en modo "Action Editor" para ver el nombre de los clips de animaciones, seleccione el que quiere convertir y presione el botón que corresponda
+
+![Image description](https://raw.githubusercontent.com/RichardCollao/RotationConvert/master/files/Screenshot_01.png)
+
