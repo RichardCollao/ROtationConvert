@@ -8,8 +8,7 @@ Este addon para Blender puede ser útil por ejemplo para homogeneizar varios cli
 1. Descarga este repositorio como .zip
 2. En Blender, vaya a Editar> Preferencias> Complementos> Instalar ...
 3. Seleccione el .zip descargado
-4. Habilite el complemento, que aparecerá en la lista.arecerá en la lista.
-
+4. Habilite el complemento, que aparecerá en la lista.
 
 ## Instrucciones
 Una vez instalado, en su ventana principal seleccione una armadura y cambie a modo POSE, abra otra ventana de tipo "Dope Sheet" en modo "Action Editor", esta ventana contiene un campo de tipo lista deplegable con los nombres de los clips de animaciones, por último en el panel del addon seleccione el clip que quiere convertir y presione el botón que corresponda, esto tardara un poco dependiendo de la cantidad de keyframes.
