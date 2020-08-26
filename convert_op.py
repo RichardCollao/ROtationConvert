@@ -25,11 +25,6 @@ class Convert_OT_Operator(bpy.types.Operator):
             bpy.context.scene.message = "You must be in POSE mode"
             bpy.ops.object.dialog_operator('INVOKE_DEFAULT')
             return {'FINISHED'}
-
-        if bpy.context.scene.isWorking == True:
-            bpy.context.scene.message = "wait for current conversion to finish"
-            bpy.ops.object.dialog_operator('INVOKE_DEFAULT')
-            return {'FINISHED'}
             
         try:
             if self.property == 'to_quaternion':
@@ -40,6 +35,7 @@ class Convert_OT_Operator(bpy.types.Operator):
                 op.run(action)
         except:
             print("An exception occurred")
+            #print("Oops!", sys.exc_info()[0], "occurred.")
             bpy.context.scene.message = "An exception occurred"
             bpy.ops.object.dialog_operator('INVOKE_DEFAULT')
             bpy.types.Scene.isWorking = False

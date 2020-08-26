@@ -15,8 +15,6 @@ class EulerToQuaternion:
             bpy.context.scene.message = "No keyframes found to modify"
             bpy.ops.object.dialog_operator('INVOKE_DEFAULT')
             return
-        else:
-            bpy.context.scene.isWorking = True
 
         for bone in self.dic:
             print("Select bone: ", bone)
@@ -40,7 +38,6 @@ class EulerToQuaternion:
                 self.insertKey(k)
             # after transform delete curve old
             self.deleteFCurve(bone)
-            bpy.context.scene.isWorking = False
           
     def getKeyFrames(self):
         for fcu in self.action.fcurves:

@@ -11,6 +11,7 @@ class MainPanel(bpy.types.Panel):
     bl_category = 'View'
     
     def draw(self, context):
+        
         layout = self.layout
         scene = context.scene
         layout.label(text="Rotation convert", icon='ARMATURE_DATA')
@@ -42,7 +43,6 @@ def register():
     for clss in classes:
         bpy.utils.register_class(clss)
     bpy.types.Scene.action = bpy.props.EnumProperty(items=MainPanel.actions_items)
-    bpy.types.Scene.isWorking = bpy.props.BoolProperty(name='bool', default=False)
 
 def unregister():
     for clss in classes:
