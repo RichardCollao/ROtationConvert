@@ -30,13 +30,19 @@ class Convert_OT_Operator(bpy.types.Operator):
             bpy.context.scene.message = "wait for current conversion to finish"
             bpy.ops.object.dialog_operator('INVOKE_DEFAULT')
             return {'FINISHED'}
-
-        if self.property == 'to_quaternion':
-            op = QuaternionToEuler()
-            op.run(action)
-        elif self.property == 'to_euler':
-            op = EulerToQuaternion()
-            op.run(action)
+            
+        try:
+            if self.property == 'to_quaternion':
+                op = QuaternionToEuler()
+                op.run(action)
+            elif self.property == 'to_euler':
+                op = EulerToQuaternion()
+                op.run(action)
+        except:
+            print("An exception occurred")
+            bpy.context.scene.message = "An exception occurred"
+            bpy.ops.object.dialog_operator('INVOKE_DEFAULT')
+            bpy.types.Scene.isWorking = False
 
 
         return {'FINISHED'}
